@@ -1,0 +1,22 @@
+const jwt = require('jsonwebtoken');
+require('dotenv').config();
+
+function authMiddleware(req, res, next) {
+    const authHeader = req.headers.authorization;
+
+    if (!authHeader) {
+        return res.status(401).json({ error: 'Токен не предоставлен' });
+    }
+
+    const token = authHeader.replace('Bearer ', '');
+
+    try {
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        req.admin = decoded;
+        next();
+    } catch (err) {
+        return res.status(401).json({ error: 'Неверный или истёкший токен' });
+    }
+}
+
+module.exports = authMiddleware;

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Продажа сэндвич-панелей и профлиста для промышленного и коммерческого строительства. Прямые поставки, доставка по России.">
+    <meta name="keywords" content="сэндвич-панели, профлист, профнастил, металлические строительные материалы">
+    <title>MetalPro — Сэндвич-панели и профлист для промышленного строительства</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="images/logo.jpg" alt="MetalPro">
+        </a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="index.html" class="nav__link active">Главная</a></li>
+                <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+                <li><a href="calculator.html" class="nav__link">Калькулятор</a></li>
+                <li><a href="objects.html" class="nav__link">Объекты</a></li>
+                <li><a href="contact.html" class="nav__link">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header__contacts">
+            <a href="tel:+78001234567" class="header__phone">
+                <strong>8 (800) 123-45-67</strong>
+                <span>Бесплатный звонок</span>
+            </a>
+            <button class="btn-callback" onclick="openCallback()">Получить КП</button>
+        </div>
+        <button class="burger-menu" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<main>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <span class="hero__label">Металлические строительные материалы</span>
+            <h1>Сэндвич-панели и профлист<br>для промышленного и коммерческого строительства</h1>
+            <p class="hero__subtitle">
+                Поставка материалов для объектов любого масштаба.<br>
+                Расчёт объёма &bull; Комплектация &bull; Доставка
+            </p>
+            <div class="hero__actions">
+                <a href="calculator.html" class="btn btn-accent">Рассчитать стоимость</a>
+                <a href="contact.html" class="btn btn-secondary">Получить коммерческое предложение</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+
+                    <div>
+                        <div class="hero-stat__number">10+ лет</div>
+                        <div class="hero-stat__label">на рынке строительных материалов</div>
+                    </div>
+                </div>
+                <div class="hero-stat">
+
+                    <div>
+                        <div class="hero-stat__number">500+ объектов</div>
+                        <div class="hero-stat__label">поставлено по всей России</div>
+                    </div>
+                </div>
+                <div class="hero-stat">
+
+                    <div>
+                        <div class="hero-stat__number">от 1 дня</div>
+                        <div class="hero-stat__label">сроки поставки и комплектации</div>
+                    </div>
+                </div>
+                <div class="hero-stat">
+
+                    <div>
+                        <div class="hero-stat__number">По всей России</div>
+                        <div class="hero-stat__label">доставка собственным транспортом и ТК</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КАТАЛОГ -->
+    <section class="catalog-section">
+        <div class="container">
+            <div class="catalog-section__header">
+                <div>
+                    <h2>Каталог продукции</h2>
+                    <p>Предлагаем широкий ассортимент сэндвич-панелей и профлиста от проверенных производителей. Всегда в наличии на складе и под заказ.</p>
+                </div>
+                <a href="catalog.html" class="catalog-link">Весь каталог &rarr;</a>
+            </div>
+
+            <div class="catalog-grid-home">
+                <div class="product-card animate-on-scroll fade-up delay-100">
+                    <div class="product-card__image">
+                        <img src="images/sandwich-panel.jpg" alt="Сэндвич-панели">
+                    </div>
+                    <div class="product-card__content">
+                        <h3>Сэндвич-панели</h3>
+                        <p style="color: var(--text-light); font-size: 14px; margin-bottom: 16px;">Для стен и кровли. Отличная тепло- и звукоизоляция, долговечность.</p>
+                        <a href="catalog.html#sandwich" class="catalog-link">Подробнее &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="product-card animate-on-scroll fade-up delay-200">
+                    <div class="product-card__image">
+                        <img src="images/prof-list.jpg" alt="Профлист">
+                    </div>
+                    <div class="product-card__content">
+                        <h3>Профлист</h3>
+                        <p style="color: var(--text-light); font-size: 14px; margin-bottom: 16px;">Для кровли, стен, заборов и ограждений. Широкий выбор профилей и цветов.</p>
+                        <a href="catalog.html#proflist" class="catalog-link">Подробнее &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="product-card animate-on-scroll fade-up delay-300" style="background: var(--dark); border-color: var(--dark);">
+                    <div class="product-card__image">
+                        <img src="images/sandwich-industrial.jpg" alt="Сэндвич-панели для промышленных объектов">
+                    </div>
+                    <div class="product-card__content">
+                        <div style="color: rgba(255,255,255,0.5); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Популярное решение</div>
+                        <h3 style="color: white;">Сэндвич-панели для промышленных объектов</h3>
+                        <ul style="list-style: none; margin: 16px 0; color: rgba(255,255,255,0.75); font-size: 14px;">
+                            <li style="padding: 6px 0;">&check; Высокая энергоэффективность</li>
+                            <li style="padding: 6px 0;">&check; Быстрый монтаж</li>
+                            <li style="padding: 6px 0;">&check; Разные типы наполнителей</li>
+                        </ul>
+                        <a href="calculator.html" class="btn btn-accent" style="margin-top: 8px;">Рассчитать проект</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПРЕИМУЩЕСТВА -->
+    <section class="advantages">
+        <div class="container">
+            <span class="section-label">Почему мы</span>
+            <h2>Наши преимущества</h2>
+            <div class="advantages__grid">
+                <div class="advantage-card animate-on-scroll fade-up delay-100">
+                    <div class="advantage__icon"><img src="images/factory.jpg" alt=""></div>
+                    <h3>Прямые поставки от производителей</h3>
+                    <p>Без наценок и посредников.</p>
+                </div>
+                <div class="advantage-card animate-on-scroll fade-up delay-200">
+                    <div class="advantage__icon"><img src="images/shield.jpg" alt=""></div>
+                    <h3>Гарантия качества</h3>
+                    <p>Сертификаты на всю продукцию.</p>
+                </div>
+                <div class="advantage-card animate-on-scroll fade-up delay-300">
+                    <div class="advantage__icon"><img src="images/package.jpg" alt=""></div>
+                    <h3>Комплексный подход</h3>
+                    <p>Поможем с расчётом, логистикой и комплектацией.</p>
+                </div>
+                <div class="advantage-card animate-on-scroll fade-up delay-400">
+                    <div class="advantage__icon"><img src="images/team.jpg" alt=""></div>
+                    <h3>Опытная команда</h3>
+                    <p>Специалисты, которые знают рынок и задачи стройки.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПРИМЕНЕНИЕ -->
+    <!-- ПРИМЕНЕНИЕ -->
+    <section class="applications">
+        <div class="container">
+            <span class="section-label">Где применяется</span>
+            <h2>Наши материалы используются в строительстве</h2>
+
+            <div class="applications__row">
+                <!-- Фото -->
+                <div class="applications__col applications__col--image">
+                    <img src="images/applications.jpg" alt="Применение сэндвич-панелей и профлиста" class="applications__image">
+                </div>
+
+                <!-- Список с галочками -->
+                <div class="applications__col applications__col--list">
+                    <ul class="applications__list">
+                        <li>Промышленные объекты</li>
+                        <li>Складские комплексы</li>
+                        <li>Торговые центры</li>
+                        <li>Коммерческая недвижимость</li>
+                        <li>Сельскохозяйственные объекты</li>
+                    </ul>
+                </div>
+
+                <!-- Форма -->
+                <div class="applications__col applications__col--form">
+                    <div class="applications__form-box">
+                        <h4>Подберём оптимальное решение</h4>
+                        <p>Оставьте заявку — рассчитаем стоимость под ваш объект.</p>
+                        <form id="applicationsForm" class="applications__form">
+                            <input type="text" name="name" placeholder="Ваше имя" required>
+                            <input type="tel" name="phone" placeholder="Телефон" required>
+                            <button type="submit" class="btn btn-accent btn-block">Оставить заявку &rarr;</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- КАК РАБОТАЕМ -->
+    <section class="how-we-work">
+        <div class="container">
+            <span class="section-label">Процесс</span>
+            <h2>Как мы работаем</h2>
+            <div class="steps-grid">
+                <div class="step animate-on-scroll fade-up delay-100">
+                    <div class="step-number">01</div>
+                    <h3>Заявка</h3>
+                    <p>Вы оставляете заявку на сайте или по телефону.</p>
+                </div>
+                <div class="step animate-on-scroll fade-up delay-200">
+                    <div class="step-number">02</div>
+                    <h3>Расчёт</h3>
+                    <p>Мы подбираем материалы, считаем объём и стоимость.</p>
+                </div>
+                <div class="step animate-on-scroll fade-up delay-300">
+                    <div class="step-number">03</div>
+                    <h3>Комплектация</h3>
+                    <p>Подготовка всего пакета и согласование сроков.</p>
+                </div>
+                <div class="step animate-on-scroll fade-up delay-400">
+                    <div class="step-number">04</div>
+                    <h3>Доставка</h3>
+                    <p>Отгружаем на ваш объект в срок.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-block animate-on-scroll fade-up">
+                <div>
+                    <span class="section-label" style="color: rgba(255,255,255,0.5);">Готовы обсудить проект?</span>
+                    <h2>Оставьте заявку на расчёт стоимости материалов</h2>
+                    <p>Наши специалисты свяжутся с вами в течение 15 минут.</p>
+                </div>
+                <div class="cta-block__actions">
+                    <button type="button" class="btn btn-accent" onclick="openCallback()">Оставить заявку &rarr;</button>
+                    <a href="contact.html" class="btn btn-secondary">Получить КП</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__grid">
+            <div class="footer__col">
+                <div class="footer__logo">
+                    <img src="images/logo.jpg" alt="MetalPro">
+                </div>
+                <p class="footer__description">Сэндвич-панели и профлист для вашего бизнеса. Прямые поставки от производителей по всей России.</p>
+            </div>
+            <div class="footer__col">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="calculator.html">Калькулятор</a></li>
+                    <li><a href="objects.html">Объекты</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Продукция</h4>
+                <ul>
+                    <li><a href="catalog.html#sandwich">Сэндвич-панели</a></li>
+                    <li><a href="catalog.html#proflist">Профлист</a></li>
+                    <li><a href="#">Комплектующие</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <a href="tel:+78001234567" class="footer__phone">8 (800) 123-45-67</a>
+                <div class="footer__phone-label">Бесплатный звонок</div>
+                <p>info@metalpro.ru</p>
+                <div class="footer__socials">
+                    <a href="#" aria-label="Telegram"><img src="images/icons/telegram.svg" alt="Telegram"></a>
+                    <a href="#" aria-label="WhatsApp"><img src="images/icons/whatsapp.svg" alt="WhatsApp"></a>
+                    <a href="#" aria-label="VK"><img src="images/icons/vk.svg" alt="VK"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2025 MetalPro. Все права защищены.</p>
+            <div class="footer__bottom-links">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Договор оферты</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

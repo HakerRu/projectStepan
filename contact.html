@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Контакты MetalPro. Условия сотрудничества, сроки поставки и производства.">
+    <title>Контакты и условия | MetalPro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/calculator.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="images/logo.jpg" alt="MetalPro">
+        </a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="index.html" class="nav__link">Главная</a></li>
+                <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+                <li><a href="calculator.html" class="nav__link">Калькулятор</a></li>
+                <li><a href="objects.html" class="nav__link">Объекты</a></li>
+                <li><a href="contact.html" class="nav__link active">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header__contacts">
+            <a href="tel:+78001234567" class="header__phone">
+                <strong>8 (800) 123-45-67</strong>
+                <span>Бесплатный звонок</span>
+            </a>
+            <button class="btn-callback" onclick="openCallback()">Получить КП</button>
+        </div>
+        <button class="burger-menu" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<main>
+    <section class="contact-page">
+        <div class="container">
+            <span class="section-label">Свяжитесь с нами</span>
+            <h1>Контакты и условия сотрудничества</h1>
+            <p class="section-subtitle">Ответим на вопросы, рассчитаем стоимость и подготовим коммерческое предложение.</p>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Наши контакты</h2>
+                    <div class="contact-item animate-on-scroll fade-up delay-100">
+                        <span class="contact-icon"><img src="images/icons/phone.svg" alt=""></span>
+                        <div>
+                            <h3>Телефон</h3>
+                            <a href="tel:+78001234567">8 (800) 123-45-67</a>
+                            <p>Бесплатно по России</p>
+                        </div>
+                    </div>
+                    <div class="contact-item animate-on-scroll fade-up delay-200">
+                        <span class="contact-icon"><img src="images/icons/telegram.svg" alt=""></span>
+                        <div>
+                            <h3>WhatsApp / Telegram</h3>
+                            <a href="https://wa.me/79001234567">+7 (900) 123-45-67</a>
+                        </div>
+                    </div>
+                    <div class="contact-item animate-on-scroll fade-up delay-300">
+                        <span class="contact-icon"><img src="images/icons/email.svg" alt=""></span>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:info@metalpro.ru">info@metalpro.ru</a>
+                        </div>
+                    </div>
+                    <div class="contact-item animate-on-scroll fade-up delay-400">
+                        <span class="contact-icon"><img src="images/icons/office.svg" alt=""></span>
+                        <div>
+                            <h3>Офис</h3>
+                            <p>г. Москва, ул. Строителей, 15</p>
+                            <p>Пн-Пт: 9:00 - 18:00</p>
+                        </div>
+                    </div>
+                    <div class="contact-item animate-on-scroll fade-up delay-500">
+                        <span class="contact-icon"><img src="images/icons/warehouse.svg" alt=""></span>
+                        <div>
+                            <h3>Склад</h3>
+                            <p>МО, г. Домодедово, ул. Промышленная, 5</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper animate-on-scroll fade-up delay-300">
+                    <h2>Отправить заявку</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Ваше имя *</label>
+                            <input type="text" id="name" name="name" required placeholder="Иван Иванов">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Компания</label>
+                            <input type="text" id="company" name="company" placeholder="ООО «СтройПроект»">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="ivan@company.ru">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Сообщение</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Опишите ваш проект..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" required>
+                                Согласен на обработку данных
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-accent btn-block">Отправить заявку &rarr;</button>
+                    </form>
+                </div>
+            </div>
+
+            <section id="conditions" class="conditions">
+                <span class="section-label">Как мы работаем</span>
+                <h2 class="animate-on-scroll fade-up">Условия сотрудничества</h2>
+                <div class="conditions-grid">
+                    <div class="condition-card animate-on-scroll fade-up delay-100">
+                        <div class="condition-card__icon"><img src="images/icons/docs.svg" alt=""></div>
+                        <h3>Для генподрядчиков</h3>
+                        <ul>
+                            <li>Отсрочка платежа до 30 дней</li>
+                            <li>Персональный менеджер</li>
+                            <li>Приоритетная отгрузка</li>
+                        </ul>
+                    </div>
+                    <div class="condition-card animate-on-scroll fade-up delay-200">
+                        <div class="condition-card__icon"><img src="images/icons/truck.svg" alt=""></div>
+                        <h3>Доставка</h3>
+                        <ul>
+                            <li>Собственный автопарк</li>
+                            <li>Доставка по РФ от 1 дня</li>
+                            <li>Самовывоз в Домодедово</li>
+                        </ul>
+                    </div>
+                    <div class="condition-card animate-on-scroll fade-up delay-300">
+                        <div class="condition-card__icon"><img src="images/icons/package.svg" alt=""></div>
+                        <h3>Производство</h3>
+                        <ul>
+                            <li>Срок от 3 рабочих дней</li>
+                            <li>Нестандартные размеры</li>
+                            <li>Экспресс-заказ</li>
+                        </ul>
+                    </div>
+                    <div class="condition-card animate-on-scroll fade-up delay-400">
+                        <div class="condition-card__icon"><img src="images/icons/payment.svg" alt=""></div>
+                        <h3>Оплата</h3>
+                        <ul>
+                            <li>Работаем с НДС (20%)</li>
+                            <li>Безналичный расчёт</li>
+                            <li>Предоплата от 50%</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="faq">
+                <span class="section-label">FAQ</span>
+                <h2 class="animate-on-scroll fade-up">Часто задаваемые вопросы</h2>
+                <div class="faq-list animate-on-scroll fade-up delay-200">
+                    <div class="faq-item">
+                        <button class="faq-question">Как быстро можете поставить материалы? <span class="faq-arrow">&darr;</span></button>
+                        <div class="faq-answer"><p>Стандартный срок — от 3 до 14 дней в зависимости от объёма и наличия на складе. При срочных заказах возможна экспресс-отгрузка в течение 24 часов.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Работаете ли вы с НДС? <span class="faq-arrow">&darr;</span></button>
+                        <div class="faq-answer"><p>Да, работаем с НДС 20%. Предоставляем полный пакет закрывающих документов: счёт-фактуру, товарную накладную, сертификаты.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Как рассчитать точную стоимость? <span class="faq-arrow">&darr;</span></button>
+                        <div class="faq-answer"><p>Воспользуйтесь калькулятором на сайте или отправьте заявку — менеджер подготовит расчёт в течение 1 часа.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Минимальный объём заказа? <span class="faq-arrow">&darr;</span></button>
+                        <div class="faq-answer"><p>От 100 м² для сэндвич-панелей и от 200 м² для профлиста. При меньших объёмах цена рассчитывается индивидуально.</p></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__grid">
+            <div class="footer__col">
+                <div class="footer__logo">
+                    <img src="images/logo.jpg" alt="MetalPro">
+                </div>
+                <p class="footer__description">Сэндвич-панели и профлист для вашего бизнеса. Прямые поставки от производителей по всей России.</p>
+            </div>
+            <div class="footer__col">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="calculator.html">Калькулятор</a></li>
+                    <li><a href="objects.html">Объекты</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Продукция</h4>
+                <ul>
+                    <li><a href="catalog.html#sandwich">Сэндвич-панели</a></li>
+                    <li><a href="catalog.html#proflist">Профлист</a></li>
+                    <li><a href="#">Комплектующие</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <a href="tel:+78001234567" class="footer__phone">8 (800) 123-45-67</a>
+                <div class="footer__phone-label">Бесплатный звонок</div>
+                <p>info@metalpro.ru</p>
+                <div class="footer__socials">
+                    <a href="#" aria-label="Telegram"><img src="images/icons/telegram.svg" alt="Telegram"></a>
+                    <a href="#" aria-label="WhatsApp"><img src="images/icons/whatsapp.svg" alt="WhatsApp"></a>
+                    <a href="#" aria-label="VK"><img src="images/icons/vk.svg" alt="VK"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2025 MetalPro. Все права защищены.</p>
+            <div class="footer__bottom-links">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Договор оферты</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

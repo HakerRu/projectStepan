@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Примеры реализованных объектов с использованием сэндвич-панелей и профлиста.">
+    <title>Наши объекты | MetalPro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="images/logo.jpg" alt="MetalPro">
+        </a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="index.html" class="nav__link">Главная</a></li>
+                <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+                <li><a href="calculator.html" class="nav__link">Калькулятор</a></li>
+                <li><a href="objects.html" class="nav__link active">Объекты</a></li>
+                <li><a href="contact.html" class="nav__link">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header__contacts">
+            <a href="tel:+78001234567" class="header__phone">
+                <strong>8 (800) 123-45-67</strong>
+                <span>Бесплатный звонок</span>
+            </a>
+            <button class="btn-callback" onclick="openCallback()">Получить КП</button>
+        </div>
+        <button class="burger-menu" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<main>
+    <section class="objects-page">
+        <div class="container">
+            <span class="section-label">Портфолио</span>
+            <h1>Примеры реализованных объектов</h1>
+            <p class="objects-intro animate-on-scroll fade-up delay-200">
+                Более 50 успешно реализованных проектов по всей России.
+                Работаем с генподрядчиками и частными заказчиками.
+            </p>
+
+            <!-- Слайдер объектов -->
+            <div class="slider animate-on-scroll fade-up delay-300">
+                <div class="slider-track">
+                    <div class="slider-slide">
+                        <div class="object-card">
+                            <div class="object-card__image">
+                                <img src="images/objects/warehouse-1.jpg" alt="Складской комплекс в Подмосковье">
+                                <span class="object-area">12 000 м²</span>
+                            </div>
+                            <div class="object-card__content">
+                                <h3>Складской комплекс «Северный»</h3>
+                                <p class="object-location">Московская область, 2023</p>
+                                <p class="object-description">
+                                    Строительство складского комплекса класса А. Использованы стеновые
+                                    и кровельные сэндвич-панели толщиной 120 мм с утеплителем PIR.
+                                </p>
+                                <div class="object-materials">
+                                    <h4>Использованные материалы</h4>
+                                    <ul>
+                                        <li>Стеновые панели: 8 500 м²</li>
+                                        <li>Кровельные панели: 3 500 м²</li>
+                                        <li>Профлист НС35: 1 200 м²</li>
+                                    </ul>
+                                </div>
+                                <div class="object-timing">
+                                    <strong>Срок поставки:</strong> 14 дней<br>
+                                    <strong>Срок монтажа:</strong> 45 дней
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-slide">
+                        <div class="object-card">
+                            <div class="object-card__image">
+                                <img src="images/objects/factory-1.jpg" alt="Производственный цех в Казани">
+                                <span class="object-area">8 500 м²</span>
+                            </div>
+                            <div class="object-card__content">
+                                <h3>Производственный цех «Волга»</h3>
+                                <p class="object-location">г. Казань, 2022</p>
+                                <p class="object-description">
+                                    Возведение производственного цеха для машиностроительного завода.
+                                    Повышенные требования к огнестойкости и теплоизоляции.
+                                </p>
+                                <div class="object-materials">
+                                    <h4>Использованные материалы</h4>
+                                    <ul>
+                                        <li>Стеновые панели: 5 800 м²</li>
+                                        <li>Кровельные панели: 2 700 м²</li>
+                                        <li>Фасонные элементы: 850 пог.м</li>
+                                    </ul>
+                                </div>
+                                <div class="object-timing">
+                                    <strong>Срок поставки:</strong> 10 дней<br>
+                                    <strong>Срок монтажа:</strong> 35 дней
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-slide">
+                        <div class="object-card">
+                            <div class="object-card__image">
+                                <img src="images/objects/mall-1.jpg" alt="Торговый центр в Екатеринбурге">
+                                <span class="object-area">15 000 м²</span>
+                            </div>
+                            <div class="object-card__content">
+                                <h3>ТРЦ «Уральский»</h3>
+                                <p class="object-location">г. Екатеринбург, 2023</p>
+                                <p class="object-description">
+                                    Крупный торгово-развлекательный центр. Сложная геометрия кровли,
+                                    повышенные требования к эстетике фасадов.
+                                </p>
+                                <div class="object-materials">
+                                    <h4>Использованные материалы</h4>
+                                    <ul>
+                                        <li>Фасадные панели: 9 200 м²</li>
+                                        <li>Кровельные панели: 5 800 м²</li>
+                                        <li>Профлист Н75: 2 400 м²</li>
+                                    </ul>
+                                </div>
+                                <div class="object-timing">
+                                    <strong>Срок поставки:</strong> 21 день<br>
+                                    <strong>Срок монтажа:</strong> 60 дней
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn prev">&larr;</button>
+                <button class="slider-btn next">&rarr;</button>
+                <div class="slider-dots"></div>
+            </div>
+
+            <div class="objects-stats animate-on-scroll fade-up">
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Реализованных проектов</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">250 000</span>
+                    <span class="stat-label">м² поставленных материалов</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5 лет</span>
+                    <span class="stat-label">На рынке</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Соблюдение сроков</span>
+                </div>
+            </div>
+
+            <div class="cta-block animate-on-scroll fade-up" style="margin-top: 60px;">
+                <div>
+                    <span class="section-label" style="color: rgba(255,255,255,0.5);">Готовы обсудить проект?</span>
+                    <h2>Хотите такой же результат?</h2>
+                    <p>Рассчитаем стоимость и сроки под ваш проект.</p>
+                </div>
+                <div class="cta-block__actions">
+                    <button type="button" class="btn btn-accent" onclick="openCallback()">Обсудить проект &rarr;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__grid">
+            <div class="footer__col">
+                <div class="footer__logo">
+                    <img src="images/logo.jpg" alt="MetalPro">
+                </div>
+                <p class="footer__description">Сэндвич-панели и профлист для вашего бизнеса. Прямые поставки от производителей по всей России.</p>
+            </div>
+            <div class="footer__col">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="calculator.html">Калькулятор</a></li>
+                    <li><a href="objects.html">Объекты</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Продукция</h4>
+                <ul>
+                    <li><a href="catalog.html#sandwich">Сэндвич-панели</a></li>
+                    <li><a href="catalog.html#proflist">Профлист</a></li>
+                    <li><a href="#">Комплектующие</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <a href="tel:+78001234567" class="footer__phone">8 (800) 123-45-67</a>
+                <div class="footer__phone-label">Бесплатный звонок</div>
+                <p>info@metalpro.ru</p>
+                <div class="footer__socials">
+                    <a href="#" aria-label="Telegram"><img src="images/icons/telegram.svg" alt="Telegram"></a>
+                    <a href="#" aria-label="WhatsApp"><img src="images/icons/whatsapp.svg" alt="WhatsApp"></a>
+                    <a href="#" aria-label="VK"><img src="images/icons/vk.svg" alt="VK"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2025 MetalPro. Все права защищены.</p>
+            <div class="footer__bottom-links">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Договор оферты</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Калькулятор стоимости сэндвич-панелей и профлиста. Рассчитайте цену онлайн с учётом всех параметров.">
+    <title>Калькулятор стоимости | MetalPro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/calculator.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<!-- Оверлей успеха -->
+<div class="success-overlay" id="successOverlay">
+    <div class="success-card">
+        <div class="success-icon">
+            <svg viewBox="0 0 52 52" class="success-checkmark">
+                <circle class="success-circle" cx="26" cy="26" r="24" fill="none"/>
+                <path class="success-check" fill="none" d="M14 27l8 8 16-16"/>
+            </svg>
+        </div>
+        <h2 class="success-title">Заявка отправлена</h2>
+        <p class="success-text">Менеджер свяжется с вами<br>в течение 15 минут</p>
+    </div>
+</div>
+
+
+<body>
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="images/logo.jpg" alt="MetalPro">
+        </a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="index.html" class="nav__link">Главная</a></li>
+                <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+                <li><a href="calculator.html" class="nav__link active">Калькулятор</a></li>
+                <li><a href="objects.html" class="nav__link">Объекты</a></li>
+                <li><a href="contact.html" class="nav__link">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header__contacts">
+            <a href="tel:+78001234567" class="header__phone">
+                <strong>8 (800) 123-45-67</strong>
+                <span>Бесплатный звонок</span>
+            </a>
+            <button class="btn-callback" onclick="openCallback()">Получить КП</button>
+        </div>
+        <button class="burger-menu" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<main>
+    <section class="calculator-page">
+        <div class="container">
+            <span class="section-label">Расчёт стоимости</span>
+            <h1>Калькулятор стоимости</h1>
+            <p class="calculator-intro animate-on-scroll fade-up delay-200">
+                Рассчитайте предварительную стоимость продукции с учётом всех параметров.
+                Для точного расчёта свяжитесь с менеджером.
+            </p>
+
+            <div class="calculator-wrapper animate-on-scroll fade-up delay-300">
+                <form id="calculatorForm" class="calculator-form">
+                    <div class="form-group">
+                        <label for="productType">Тип продукции</label>
+                        <select id="productType" name="productType" required>
+                            <option value="">Выберите тип продукции</option>
+                            <option value="sandwich">Сэндвич-панели</option>
+                            <option value="proflist">Профлист</option>
+                        </select>
+                    </div>
+
+                    <div id="productParams" class="product-params"></div>
+
+                    <button type="submit" class="btn btn-accent btn-calculate">
+                        Рассчитать стоимость &rarr;
+                    </button>
+                </form>
+
+                <div id="calcResult" class="calc-result-container">
+                    <div class="calc-placeholder">
+                        <div class="calc-placeholder__icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="4" y="2" width="16" height="20" rx="2"/>
+                                <line x1="8" y1="6" x2="16" y2="6"/>
+                                <line x1="8" y1="11" x2="16" y2="11"/>
+                                <line x1="8" y1="16" x2="12" y2="16"/>
+                            </svg>
+                        </div>
+                        <p>Выберите параметры и нажмите «Рассчитать»</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calculator-info animate-on-scroll fade-up">
+                <span class="section-label">Процесс</span>
+                <h3>Как производится расчёт?</h3>
+                <div class="info-steps">
+                    <div class="step animate-on-scroll fade-up delay-100">
+                        <span class="step-number">01</span>
+                        <p>Выберите тип продукции и параметры</p>
+                    </div>
+                    <div class="step animate-on-scroll fade-up delay-200">
+                        <span class="step-number">02</span>
+                        <p>Укажите необходимую площадь и размеры</p>
+                    </div>
+                    <div class="step animate-on-scroll fade-up delay-300">
+                        <span class="step-number">03</span>
+                        <p>Получите предварительный расчёт стоимости</p>
+                    </div>
+                    <div class="step animate-on-scroll fade-up delay-400">
+                        <span class="step-number">04</span>
+                        <p>Отправьте заявку для точного КП</p>
+                    </div>
+                </div>
+                <p class="info-note">
+                    * Цены в калькуляторе ориентировочные. Точная стоимость рассчитывается менеджером
+                    с учётом объёмов, сложности проекта и условий доставки.
+                </p>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-block animate-on-scroll fade-up" style="margin-top: 60px;">
+                <div>
+                    <span class="section-label" style="color: rgba(255,255,255,0.5);">Нужна помощь?</span>
+                    <h2>Не уверены в параметрах?</h2>
+                    <p>Наш менеджер поможет подобрать материалы под ваш объект и подготовит точный расчёт.</p>
+                </div>
+                <div class="cta-block__actions">
+                    <button type="button" class="btn btn-accent" onclick="openCallback()">Получить консультацию &rarr;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__grid">
+            <div class="footer__col">
+                <div class="footer__logo">
+                    <img src="images/logo.jpg" alt="MetalPro">
+                </div>
+                <p class="footer__description">Сэндвич-панели и профлист для вашего бизнеса. Прямые поставки от производителей по всей России.</p>
+            </div>
+            <div class="footer__col">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="calculator.html">Калькулятор</a></li>
+                    <li><a href="objects.html">Объекты</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Продукция</h4>
+                <ul>
+                    <li><a href="catalog.html#sandwich">Сэндвич-панели</a></li>
+                    <li><a href="catalog.html#proflist">Профлист</a></li>
+                    <li><a href="#">Комплектующие</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <a href="tel:+78001234567" class="footer__phone">8 (800) 123-45-67</a>
+                <div class="footer__phone-label">Бесплатный звонок</div>
+                <p>info@metalpro.ru</p>
+                <div class="footer__socials">
+                    <a href="#" aria-label="Telegram"><img src="images/icons/telegram.svg" alt="Telegram"></a>
+                    <a href="#" aria-label="WhatsApp"><img src="images/icons/whatsapp.svg" alt="WhatsApp"></a>
+                    <a href="#" aria-label="VK"><img src="images/icons/vk.svg" alt="VK"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2025 MetalPro. Все права защищены.</p>
+            <div class="footer__bottom-links">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Договор оферты</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог сэндвич-панелей и профлиста. Технические характеристики, цены, фото.">
+    <title>Каталог продукции | MetalPro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="images/logo.jpg" alt="MetalPro">
+        </a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="index.html" class="nav__link">Главная</a></li>
+                <li><a href="catalog.html" class="nav__link active">Каталог</a></li>
+                <li><a href="calculator.html" class="nav__link">Калькулятор</a></li>
+                <li><a href="objects.html" class="nav__link">Объекты</a></li>
+                <li><a href="contact.html" class="nav__link">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header__contacts">
+            <a href="tel:+78001234567" class="header__phone">
+                <strong>8 (800) 123-45-67</strong>
+                <span>Бесплатный звонок</span>
+            </a>
+            <button class="btn-callback" onclick="openCallback()">Получить КП</button>
+        </div>
+        <button class="burger-menu" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<main>
+    <section class="catalog-page">
+        <div class="container">
+            <div class="catalog-layout">
+
+                <!-- ===== САЙДБАР ===== -->
+                <aside class="catalog-sidebar">
+                    <div class="sidebar-block">
+                        <h3 class="sidebar-title">Каталог</h3>
+                        <ul class="sidebar-menu">
+                            <li class="sidebar-menu__item active" data-filter="sandwich">
+                                <span class="sidebar-menu__icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M3 7l9-4 9 4-9 4-9-4z"/>
+                                        <path d="M3 12l9 4 9-4"/>
+                                        <path d="M3 17l9 4 9-4"/>
+                                    </svg>
+                                </span>
+                                Сэндвич-панели
+                            </li>
+                            <li class="sidebar-menu__item" data-filter="proflist">
+                                <span class="sidebar-menu__icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M3 12l3-3 3 3 3-3 3 3 3-3 3 3"/>
+                                        <path d="M3 17l3-3 3 3 3-3 3 3 3-3 3 3"/>
+                                    </svg>
+                                </span>
+                                Профлист
+                            </li>
+                            <li class="sidebar-menu__item">
+                                <span class="sidebar-menu__icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <circle cx="12" cy="12" r="3"/>
+                                        <path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
+                                    </svg>
+                                </span>
+                                Комплектующие
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-block">
+                        <h3 class="sidebar-title">Фильтры</h3>
+
+                        <div class="filter-group">
+                            <h4 class="filter-group__title">По типу</h4>
+                            <label class="filter-checkbox"><input type="checkbox"> Стеновые</label>
+                            <label class="filter-checkbox"><input type="checkbox"> Кровельные</label>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4 class="filter-group__title">По толщине, мм</h4>
+                            <label class="filter-checkbox"><input type="checkbox"> 50–80</label>
+                            <label class="filter-checkbox"><input type="checkbox"> 80–120</label>
+                            <label class="filter-checkbox"><input type="checkbox"> 120–200</label>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4 class="filter-group__title">По покрытию</h4>
+                            <label class="filter-checkbox"><input type="checkbox"> Полиэстер</label>
+                            <label class="filter-checkbox"><input type="checkbox"> Пурал</label>
+                            <label class="filter-checkbox"><input type="checkbox"> PVDF</label>
+                        </div>
+
+                        <button class="filter-reset">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 12a9 9 0 1 0 3-6.7"/>
+                                <path d="M3 3v6h6"/>
+                            </svg>
+                            Сбросить фильтры
+                        </button>
+                    </div>
+                </aside>
+
+                <!-- ===== КОНТЕНТ ===== -->
+                <div class="catalog-content">
+
+                    <!-- Сэндвич-панели -->
+                    <div class="catalog-category" data-category="sandwich">
+                        <div class="catalog-category__header">
+                            <h2>Сэндвич-панели</h2>
+                            <p>Надёжные материалы для строительства промышленных и коммерческих объектов</p>
+                        </div>
+
+                        <div class="products-grid">
+                            <div class="product-card">
+                                <div class="product-card__image">
+                                    <img src="images/products/sandwich-wall-100.jpg" alt="Стеновая сэндвич-панель">
+                                    <span class="product-badge">В наличии</span>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3>Стеновая сэндвич-панель</h3>
+                                    <div class="product-specs">
+                                        <div class="spec-item"><span class="spec-label">Тип:</span><span class="spec-value">Стеновая</span></div>
+                                        <div class="spec-item"><span class="spec-label">Размеры:</span><span class="spec-value">1.19 x до 12 м</span></div>
+                                        <div class="spec-item"><span class="spec-label">Толщина панели:</span><span class="spec-value">50-200 мм</span></div>
+                                        <div class="spec-item"><span class="spec-label">Толщина металла:</span><span class="spec-value">0.5-0.7 мм</span></div>
+                                        <div class="spec-item"><span class="spec-label">Покрытие:</span><span class="spec-value">Полиэстер, PVDF</span></div>
+                                        <div class="spec-item"><span class="spec-label">Вес:</span><span class="spec-value">14.5 кг/м²</span></div>
+                                    </div>
+                                    <button class="btn btn-outline btn-block" onclick="showDetails('sandwich-wall')">Подробнее &rarr;</button>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <div class="product-card__image">
+                                    <img src="images/products/sandwich-roof-120.jpg" alt="Кровельная сэндвич-панель">
+                                    <span class="product-badge badge-order">Под заказ</span>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3>Кровельная сэндвич-панель</h3>
+                                    <div class="product-specs">
+                                        <div class="spec-item"><span class="spec-label">Тип:</span><span class="spec-value">Кровельная</span></div>
+                                        <div class="spec-item"><span class="spec-label">Размеры:</span><span class="spec-value">1.00 x до 16 м</span></div>
+                                        <div class="spec-item"><span class="spec-label">Толщина панели:</span><span class="spec-value">80-200 мм</span></div>
+                                        <div class="spec-item"><span class="spec-label">Толщина металла:</span><span class="spec-value">0.6-0.8 мм</span></div>
+                                        <div class="spec-item"><span class="spec-label">Покрытие:</span><span class="spec-value">PVDF</span></div>
+                                        <div class="spec-item"><span class="spec-label">Вес:</span><span class="spec-value">16.2 кг/м²</span></div>
+                                    </div>
+                                    <button class="btn btn-outline btn-block" onclick="showDetails('sandwich-roof')">Подробнее &rarr;</button>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <div class="product-card__image">
+                                    <img src="images/products/sandwich-pir-150.jpg" alt="Сэндвич-панель с PIR">
+                                    <span class="product-badge">Хит продаж</span>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3>Сэндвич-панель с PIR</h3>
+                                    <div class="product-specs">
+                                        <div class="spec-item"><span class="spec-label">Тип:</span><span class="spec-value">Стеновая / Кровельная</span></div>
+                                        <div class="spec-item"><span class="spec-label">Размеры:</span><span class="spec-value">1.19 x до 14 м</span></div>
+                                        <div class="spec-item"><span class="spec-label">Толщина панели:</span><span class="spec-value">60-150 мм</span></div>
+                                        <div class="spec-item"><span class="spec-label">Толщина металла:</span><span class="spec-value">0.5-0.7 мм</span></div>
+                                        <div class="spec-item"><span class="spec-label">Покрытие:</span><span class="spec-value">Полиэстер, Пурал, PVDF</span></div>
+                                        <div class="spec-item"><span class="spec-label">Вес:</span><span class="spec-value">12.8 кг/м²</span></div>
+                                    </div>
+                                    <button class="btn btn-outline btn-block" onclick="showDetails('sandwich-pir')">Подробнее &rarr;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Профлист -->
+                    <div class="catalog-category" data-category="proflist">
+                        <div class="catalog-category__header">
+                            <h2>Профлист</h2>
+                            <p>Прочный и универсальный материал для частного и коммерческого строительства</p>
+                        </div>
+
+                        <div class="products-grid">
+                            <div class="product-card">
+                                <div class="product-card__image">
+                                    <img src="images/products/proflist-ns35.jpg" alt="Профлист НС35">
+                                    <span class="product-badge">В наличии</span>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3>Профлист НС35</h3>
+                                    <div class="product-specs">
+                                        <div class="spec-item"><span class="spec-label">Тип:</span><span class="spec-value">Несущий стеновой</span></div>
+                                        <div class="spec-item"><span class="spec-label">Размеры:</span><span class="spec-value">1.06 x до 12 м</span></div>
+                                        <div class="spec-item"><span class="spec-label">Толщина металла:</span><span class="spec-value">0.4-0.7 мм</span></div>
+                                        <div class="spec-item"><span class="spec-label">Покрытие:</span><span class="spec-value">Оцинковка, Полиэстер, Пурал</span></div>
+                                        <div class="spec-item"><span class="spec-label">Вес:</span><span class="spec-value">5.4 кг/м²</span></div>
+                                        <div class="spec-item"><span class="spec-label">RAL:</span><span class="spec-value">6005, 3005, 1015, 5005</span></div>
+                                    </div>
+                                    <button class="btn btn-outline btn-block" onclick="showDetails('proflist-ns35')">Подробнее &rarr;</button>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <div class="product-card__image">
+                                    <img src="images/products/proflist-h60.jpg" alt="Профлист Н60">
+                                    <span class="product-badge badge-order">Под заказ</span>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3>Профлист Н60</h3>
+                                    <div class="product-specs">
+                                        <div class="spec-item"><span class="spec-label">Тип:</span><span class="spec-value">Несущий</span></div>
+                                        <div class="spec-item"><span class="spec-label">Размеры:</span><span class="spec-value">0.9 x до 14 м</span></div>
+                                        <div class="spec-item"><span class="spec-label">Толщина металла:</span><span class="spec-value">0.5-0.9 мм</span></div>
+                                        <div class="spec-item"><span class="spec-label">Покрытие:</span><span class="spec-value">Оцинковка, Полиэстер</span></div>
+                                        <div class="spec-item"><span class="spec-label">Вес:</span><span class="spec-value">7.2 кг/м²</span></div>
+                                        <div class="spec-item"><span class="spec-label">RAL:</span><span class="spec-value">7024, 9003, 1015</span></div>
+                                    </div>
+                                    <button class="btn btn-outline btn-block" onclick="showDetails('proflist-h60')">Подробнее &rarr;</button>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <div class="product-card__image">
+                                    <img src="images/products/proflist-c21.jpg" alt="Профлист С21">
+                                    <span class="product-badge">Хит продаж</span>
+                                </div>
+                                <div class="product-card__content">
+                                    <h3>Профлист С21</h3>
+                                    <div class="product-specs">
+                                        <div class="spec-item"><span class="spec-label">Тип:</span><span class="spec-value">Стеновой</span></div>
+                                        <div class="spec-item"><span class="spec-label">Размеры:</span><span class="spec-value">1.05 x до 12 м</span></div>
+                                        <div class="spec-item"><span class="spec-label">Толщина металла:</span><span class="spec-value">0.4-0.6 мм</span></div>
+                                        <div class="spec-item"><span class="spec-label">Покрытие:</span><span class="spec-value">Полиэстер, Пурал</span></div>
+                                        <div class="spec-item"><span class="spec-label">Вес:</span><span class="spec-value">4.8 кг/м²</span></div>
+                                        <div class="spec-item"><span class="spec-label">RAL:</span><span class="spec-value">3005, 6005, 5005, 1015</span></div>
+                                    </div>
+                                    <button class="btn btn-outline btn-block" onclick="showDetails('proflist-c21')">Подробнее &rarr;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества внизу -->
+    <section class="catalog-bottom">
+        <div class="container">
+            <div class="catalog-bottom__grid">
+                <div class="catalog-bottom__item">
+                    <div class="catalog-bottom__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/>
+                        </svg>
+                    </div>
+                    <h4>Собственное производство</h4>
+                </div>
+                <div class="catalog-bottom__item">
+                    <div class="catalog-bottom__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h4>Контроль качества на всех этапах</h4>
+                </div>
+                <div class="catalog-bottom__item">
+                    <div class="catalog-bottom__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="1" y="3" width="15" height="13"/>
+                            <path d="M16 8h4l3 3v5h-7V8z"/>
+                            <circle cx="5.5" cy="18.5" r="2.5"/>
+                            <circle cx="18.5" cy="18.5" r="2.5"/>
+                        </svg>
+                    </div>
+                    <h4>Оперативная доставка по всей России</h4>
+                </div>
+                <div class="catalog-bottom__item">
+                    <div class="catalog-bottom__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M4 22v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/>
+                        </svg>
+                    </div>
+                    <h4>Индивидуальные решения под ваш проект</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__grid">
+            <div class="footer__col">
+                <div class="footer__logo">
+                    <img src="images/logo.jpg" alt="MetalPro">
+                </div>
+                <p class="footer__description">Сэндвич-панели и профлист для вашего бизнеса. Прямые поставки от производителей по всей России.</p>
+            </div>
+            <div class="footer__col">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="calculator.html">Калькулятор</a></li>
+                    <li><a href="objects.html">Объекты</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Продукция</h4>
+                <ul>
+                    <li><a href="catalog.html">Сэндвич-панели</a></li>
+                    <li><a href="catalog.html">Профлист</a></li>
+                    <li><a href="#">Комплектующие</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <a href="tel:+78001234567" class="footer__phone">8 (800) 123-45-67</a>
+                <div class="footer__phone-label">Бесплатный звонок</div>
+                <p>info@metalpro.ru</p>
+                <div class="footer__socials">
+                    <a href="#" aria-label="Telegram"><img src="images/icons/telegram.svg" alt="Telegram"></a>
+                    <a href="#" aria-label="WhatsApp"><img src="images/icons/whatsapp.svg" alt="WhatsApp"></a>
+                    <a href="#" aria-label="VK"><img src="images/icons/vk.svg" alt="VK"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2025 MetalPro. Все права защищены.</p>
+            <div class="footer__bottom-links">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Договор оферты</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/app.js"></script>
+<script>
+    var API_URL = 'http://localhost:3000/api';
+
+    // Фильтрация по категориям в сайдбаре
+    document.querySelectorAll('.sidebar-menu__item[data-filter]').forEach(function(item) {
+        item.addEventListener('click', function() {
+            document.querySelectorAll('.sidebar-menu__item').forEach(function(i) { i.classList.remove('active'); });
+            this.classList.add('active');
+
+            var filter = this.dataset.filter;
+            document.querySelectorAll('.catalog-category').forEach(function(cat) {
+                if (cat.dataset.category === filter) {
+                    cat.style.display = 'block';
+                } else {
+                    cat.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // Сброс фильтров
+    document.querySelector('.filter-reset').addEventListener('click', function() {
+        document.querySelectorAll('.filter-checkbox input').forEach(function(cb) { cb.checked = false; });
+    });
+
+    // Подробнее о товаре
+    function showDetails(productId) {
+        var details = {
+            'sandwich-wall': 'Стеновые сэндвич-панели — идеальное решение для быстровозводимых зданий. Высокая теплоизоляция, широкий выбор цветов.',
+            'sandwich-roof': 'Кровельные панели с усиленным замком. Выдерживают снеговые нагрузки до 250 кг/м².',
+            'sandwich-pir': 'PIR-наполнитель обеспечивает лучшую теплоизоляцию. Класс горючести Г1.',
+            'proflist-ns35': 'Универсальный профиль. Подходит для кровли с шагом обрешётки до 1.5 м и фасадов.',
+            'proflist-h60': 'Несущий профлист для перекрытий. Выдерживает нагрузку до 400 кг/м².',
+            'proflist-c21': 'Экономичный стеновой профлист. Популярен для заборов и облицовки фасадов.'
+        };
+        alert(details[productId] || 'Подробная информация появится позже.');
+    }
+</script>
+</body>
+</html>

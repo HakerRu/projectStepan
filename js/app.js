@@ -1,4 +1,4 @@
-var API_URL = 'http://localhost:3000/api';
+var API_URL = 'https://arkon-stroy.ru/api';
 
 document.addEventListener('DOMContentLoaded', function() {
 
